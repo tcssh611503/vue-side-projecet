@@ -4,6 +4,9 @@ import VueRouter from 'vue-router'
 
 import HomeVue from '../components/HelloWorld.vue'
 import Home from '../views/Home.vue'
+
+import PageUser from '@/components/pages/PageUser.vue'
+import PageTest from '@/components/pages/PageTest.vue'
 //自訂分頁元件
 
 //https://dotblogs.com.tw/H20/2019/07/03/172640
@@ -27,7 +30,28 @@ const routes = [
     name: 'member',  
     component: () => import(/* webpackChunkName: "member" */ '../views/member.vue')  
   },
-
+  {
+    path: '/post',  
+    name: 'post',  
+    component: () => import(/* webpackChunkName: "member" */ '../views/pagePost.vue')  
+  },
+  {
+    path: '/test',  
+    name: 'test',  
+    component: PageTest
+  },
+  {
+    //設定:name變數
+    path: '/user/:name',  
+    name: 'user',  
+    component: PageUser
+  },
+  {
+    //用data內的變數
+    path: '/user/id/:num',  
+    name: 'user',  
+    component: PageUser
+  },
 
  
 
