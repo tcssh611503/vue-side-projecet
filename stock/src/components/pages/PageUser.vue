@@ -5,6 +5,9 @@
     <h2>you are {{$route.params.name}}</h2>
     <h3>haha</h3>
     <h4 v-if="user" >You enter by id {{user}}</h4>
+    <div>
+         <h3 v-for="todo in userId">{{todo}}</h3> <!-- eslint-disable-line -->
+    </div>
 
 
 </div>
@@ -14,7 +17,8 @@
 
 </template>
 
-<script>
+<script>import { mapState , mapMutations, mapActions } from 'vuex' // eslint-disable-line
+
 export default {
     data(){
         return{
@@ -27,9 +31,14 @@ export default {
         
     },
     computed:{
+        ...mapState(['todos']),
         user(){   // eslint-disable-line
             return this.users.find // eslint-disable-line
             (user=>user.id==this.$route.params.num) // eslint-disable-line
+        },
+        userTodos(){
+            return this.todos.filter(todos=>todos.userId==this.$route.params.num)
+
         }
     }
   
