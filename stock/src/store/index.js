@@ -36,15 +36,33 @@ Vue.use(Vuex)
 
 export default new Vuex.Store({
     state: {
+        auth: false,
+        authStyle: false,
         todos: [1,2,3]
+    },
+    getters: {
+        getLogin: function(state) {
+          return state.auth; //返回目前
+        },
     },
     mutations: {
         setTodos(state, value) {
-
             state.todos = value
-        }
+        },
+        setLogin(state, payload) {
+            state.auth = payload.auth;
+        },
+        setStyle(state, payload) {
+            state.authStyle = payload.authStyle;
+        },
     },
     actions: {
+        setLogin(state, payload) {
+            state.commit("setLogin", payload);
+         },
+        setStyle(state, payload) {
+            state.commit("setStyle", payload);
+        },
 
         loadTodos(context) {// eslint-disable-line
             axios.get("https://jsonplaceholder.typicode.com/comments").then
