@@ -4,6 +4,9 @@ import router from './router';
 //import store 
 import store from './store'
 
+//tailwindcss
+import'@/assets/style/app.css'
+
 
 Vue.config.productionTip = false
 //有成功
