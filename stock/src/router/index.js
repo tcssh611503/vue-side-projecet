@@ -52,6 +52,11 @@ const routes = [
     name: 'user',  
     component: PageUser
   },
+  {
+    path: '/announce',  
+    name: 'announce',  
+    component: () => import(/* webpackChunkName: "member" */ '../views/announce.vue')  
+  },
 
  
 
