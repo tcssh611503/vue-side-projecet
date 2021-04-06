@@ -248,4 +248,11 @@ function getPort(scheme: "http" | "https"): 80 | 443 {
   const httpPort2 = getPort3("http"); //  80
   const httpsPort = getPort3("https"); // 443
 
+
+//https://ithelp.ithome.com.tw/articles/10221007
+//空陣列
+const fooo1: string[];
+const fooo2: string[] = [];
+const fooo3: string[] = new Array()
+const fooo4: string[] = Array()
   

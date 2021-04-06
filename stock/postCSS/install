@@ -1,0 +1,30 @@
+npm install postcss postcss-loader autoprefixer precss --save-dev
+
+https://medium.com/%E5%B0%8F%E5%BD%A5%E5%BD%A5%E7%9A%84%E5%89%8D%E7%AB%AF%E4%BA%94%E5%9B%9B%E4%B8%89/%E5%9C%A8webpack%E4%B8%AD%E4%BD%BF%E7%94%A8postcss-%E5%92%8C-autoprefixer%E5%B9%ABcss%E8%87%AA%E5%8B%95%E5%A2%9E%E5%8A%A0%E5%89%8D%E7%B6%B4%E8%A9%9E-c06c093dc60e
+
+新增
+postcss.config.js
+
+vue安裝
+https://vue-loader-v14.vuejs.org/zh-cn/features/postcss.html
+
+
+https://webpack.wuhaolin.cn/3%E5%AE%9E%E6%88%98/3-5%E4%BD%BF%E7%94%A8PostCSS.html
+
+https://www.youtube.com/watch?v=7pIpukw2qs4
+
+install tailwindcss
+# Using npm
+npm install tailwindcss
+
+# Using Yarn
+yarn add tailwindcss
+
+Add Tailwind to your CSS
+src\assets\style\app.css
+
+@tailwind base;
+
+@tailwind components;
+
+@tailwind utilities;
